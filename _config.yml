@@ -1,0 +1,39 @@
+title: Carlos R Vega
+tagline: "Σ meets §"
+description: >-
+  Research and writing on economic and financial law, and how quantitative
+  methods from mathematics inform legal and regulatory analysis.
+author: Carlos R Vega
+github_username: carlos-quant
+medium_username: carlos-quant
+email: ""
+
+url: "https://carlos-quant.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /articles/:year/:month/:day/:title/
+
+collections:
+  articles:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
