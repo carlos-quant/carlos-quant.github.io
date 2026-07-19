@@ -1,17 +1,23 @@
-export default function Footer(){
+export default function Footer() {
+  return (
+    <footer className="mt-32 py-16 border-t text-center">
+      <p className="text-gray-500">
+        © 2026 Carlos Vega
+      </p>
 
-return(
+      <div className="flex justify-center gap-6 mt-6">
+        <a href="https://github.com/carlos-quant">
+          GitHub
+        </a>
 
-<footer className="py-20 text-center text-gray-500">
+        <a href="https://medium.com/@carlos-quant">
+          Medium
+        </a>
 
-  <p>
-
-© 2026 Carlos Vega
-
-</p>
-
-</footer>
-
-)
-
+        <a href="#">
+          LinkedIn
+        </a>
+      </div>
+    </footer>
+  );
 }
