@@ -47,3 +47,16 @@ a:hover{
 opacity:.6;
 
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+::selection {
+  background: #111;
+  color: white;
+}
