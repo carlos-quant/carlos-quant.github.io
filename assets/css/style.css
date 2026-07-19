@@ -1,4 +1,4 @@
-* ============================================================
+/* ============================================================
    Carlos R Vega — Design tokens
    Display: Space Grotesk / Body: Inter / Utility+Math: JetBrains Mono
    Palette: ink black + parchment, gold (law) + electric blue (math)
@@ -159,6 +159,44 @@ nav.primary-nav a.active::after {
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ---------- multilingual banner ---------- */
+.lang-banner {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.lang-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  height: 42px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lang-banner .dot {
+  color: var(--text-faint);
+}
+
+.lang-banner .lang-word {
+  display: inline-block;
+  min-width: 6ch;
+  text-align: center;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.lang-banner .lang-word[data-lang="law"] { color: var(--gold); }
+.lang-banner .lang-word[data-lang="math"],
+.lang-banner .lang-word[data-lang="finance"] { color: var(--blue); }
+
+.lang-banner .lang-word.swap {
+  opacity: 0;
+  transform: translateY(5px);
+}
 
 /* ---------- hero ---------- */
 .hero {
