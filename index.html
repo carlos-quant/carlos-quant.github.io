@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Carlos Vega</h1>
+    <p class="lede">Researching the intersection of mathematics, law, and economics.</p>
+    <a class="cta" href="{{ '/articles.html' | relative_url }}">Read the research &rarr;</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Focus areas</span>
+      <h2>Three lenses, one question</h2>
+      <p>How quantitative method sharpens legal and economic reasoning &mdash; without losing sight of what the law is actually for.</p>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Financial regulation</h3>
+        <p>Reading regulatory frameworks through the data and models they're meant to govern.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Economic law</h3>
+        <p>Where legal doctrine meets economic incentive &mdash; and where the two disagree.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Quantitative methods</h3>
+        <p>Statistics, probability, and optimization as tools for legal and policy analysis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Latest</span>
+      <h2>Recent articles</h2>
+    </div>
+
+    {% assign posts = site.posts %}
+    {% if posts.size > 0 %}
+    <ul class="article-list">
+      {% for post in posts limit: 4 %}
+      <li>
+        <div class="date">{{ post.date | date: "%d %b %Y" }}{% if post.tag %}<br><span class="tag">{{ post.tag }}</span>{% endif %}</div>
+        <div>
+          <a href="{{ post.url | relative_url }}">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <p class="excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="empty-state">No articles published yet &mdash; the first one is coming soon.</div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section" style="border-bottom: none;">
+  <div class="wrap">
+    <div class="about-snippet">
+      <div>
+        <span class="label" style="display:block; margin-bottom:14px; color: var(--faint); text-transform:uppercase; letter-spacing:0.16em; font-size:0.72rem;">About</span>
+        <h2>Carlos Vega</h2>
+        <p>Mathematics undergraduate building a bridge into law, with a focus on how quantitative reasoning strengthens economic and financial legal analysis.</p>
+        <a class="cta" href="{{ '/about.html' | relative_url }}">Full background &rarr;</a>
+      </div>
+      <ul class="role-list">
+        <li><span class="role">Mathematics, Undergraduate</span><span class="org">B.Sc. in progress</span></li>
+        <li><span class="role">Academic Director's Assistant</span><span class="org">Westhill</span></li>
+        <li><span class="role">Education, Master's</span><span class="org">In progress</span></li>
+        <li><span class="role">Law, Undergraduate</span><span class="org">UNAM &mdash; starting next year</span></li>
+      </ul>
+    </div>
+  </div>
+</section>

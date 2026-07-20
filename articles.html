@@ -1,0 +1,32 @@
+---
+layout: default
+title: Articles
+---
+<section class="section" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Archive</span>
+      <h2>All articles</h2>
+      <p>Research notes and essays on economic law, financial regulation, and quantitative method.</p>
+    </div>
+
+    {% assign posts = site.posts %}
+    {% if posts.size > 0 %}
+    <ul class="article-list">
+      {% for post in posts %}
+      <li>
+        <div class="date">{{ post.date | date: "%d %b %Y" }}{% if post.tag %}<br><span class="tag">{{ post.tag }}</span>{% endif %}</div>
+        <div>
+          <a href="{{ post.url | relative_url }}">
+            <h3>{{ post.title }}</h3>
+          </a>
+          <p class="excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="empty-state">No articles published yet &mdash; the first one is coming soon.</div>
+    {% endif %}
+  </div>
+</section>

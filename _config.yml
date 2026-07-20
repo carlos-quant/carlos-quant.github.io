@@ -1,0 +1,32 @@
+title: Carlos Vega
+description: "Researching the intersection of mathematics, law, and economics."
+author: Carlos Vega
+github_username: carlos-quant
+medium_username: carlos-quant
+email: ""
+
+url: "https://carlos-quant.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /articles/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

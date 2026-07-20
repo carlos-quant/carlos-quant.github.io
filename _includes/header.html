@@ -1,0 +1,10 @@
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">Carlos Vega</a>
+    <nav class="primary-nav">
+      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/articles.html' | relative_url }}" class="{% if page.url == '/articles.html' %}active{% endif %}">Articles</a>
+      <a href="{{ '/about.html' | relative_url }}" class="always-show {% if page.url == '/about.html' %}active{% endif %}">About</a>
+    </nav>
+  </div>
+</header>
