@@ -65,13 +65,10 @@ a:focus-visible, button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px 12px;
-  min-height: 44px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  gap: 12px;
+  height: 44px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -80,13 +77,9 @@ a:focus-visible, button:focus-visible {
 
 .lang-banner .lang-word {
   display: inline-block;
-  min-width: 5.5ch;
+  min-width: 6.5ch;
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-@media (max-width: 480px) {
-  .lang-banner-inner { font-size: 0.64rem; gap: 8px 9px; }
 }
 
 .lang-banner .lang-word.swap {
@@ -189,8 +182,8 @@ nav.primary-nav a.active::after {
 /* ---------- focus areas ---------- */
 .focus-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 44px 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 .focus-card h3 {
   font-size: 1.35rem;
