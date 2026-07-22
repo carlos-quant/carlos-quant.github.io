@@ -3,8 +3,7 @@
     var translations = {
       math:      ['Math', 'Matem\u00e1ticas', 'Math\u00e9matiques', '\u6570\u5b66'],
       law:       ['Law', 'Derecho', 'Droit', '\u6cd5\u5f8b'],
-      economics: ['Economics', 'Econom\u00eda', '\u00c9conomie', '\u7ecf\u6d4e\u5b66'],
-      history:   ['History', 'Historia', 'Histoire', '\u5386\u53f2']
+      economics: ['Economics', 'Econom\u00eda', '\u00c9conomie', '\u7ecf\u6d4e\u5b66']
     };
 
     var words = document.querySelectorAll('.lang-word');
